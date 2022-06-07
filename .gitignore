@@ -42,6 +42,3 @@ vignettes/*.pdf
 # my corpora
 corpora/*.csv
 corpora/*.RData
-corpora/*.tsv
-corpora/*.tab
-corpora/*.txt
