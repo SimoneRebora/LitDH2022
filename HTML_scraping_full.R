@@ -10,10 +10,10 @@
 # (the command will be automatically copy/pasted into the console)
 
 # define the link (here we take "War and Peace" in Goodreads)
-my_link <- "https://www.goodreads.com/book/show/656.War_and_Peace"
+my_link <- "https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone"
 
 # call rvest library (and install if needed)
-if (!require("rvest")) install.packages("rvest")
+if (!require("rvest")) { install.packages("rvest") ; require(rvest) }
 
 # read the link
 doc <- read_html(my_link)
@@ -46,9 +46,9 @@ write.csv(my_df, file = paste("corpora/Goodreads_", my_text, ".csv", sep = ""))
 # Important: try to keep the same link structure, because
 # some rubbish might be added at the end if you search for a different book
 # e.g. 
-# https://www.goodreads.com/book/show/338798.Ulysses?ac=1&from_search=true&qid=9sjp4ldVfm&rank=1
+# https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows?ac=1&from_search=true&qid=9sjp4ldVfm&rank=1
 # better write:
-# https://www.goodreads.com/book/show/338798.Ulysses
+# https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 #
 # then if you feel confident, you can try an retrieve more information for each review
 # for example the "shelves"

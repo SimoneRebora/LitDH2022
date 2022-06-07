@@ -1,8 +1,16 @@
-# load (or install) needed packages
-if (!require("cld2")) install.packages("cld2")
-if (!require("tidyverse")) install.packages("tidyverse")
-if (!require("syuzhet")) install.packages("syuzhet")
-if (!require("reshape2")) install.packages("reshape2")
+# 0. Packages upload
+
+# install needed packages
+install.packages("cld2")
+install.packages("tidyverse")
+install.packages("syuzhet")
+install.packages("reshape2")
+
+# load packages
+library(cld2)
+library(tidyverse)
+library(syuzhet)
+library(reshape2)
 
 # 1. Prepare Goodreads corpus
 
