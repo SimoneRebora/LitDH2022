@@ -82,9 +82,15 @@ for(i in 1:length(my_df$review)){
 # then we can unite the dataframes
 my_df <- cbind(my_df, emotion_values)
 
+# ...and view the result
+View(my_df)
+
 # visualization via boxplot
 # melt dataframe
 my_df_melt <- melt(my_df)
+
+# remove lengths
+my_df_melt <- my_df_melt %>% filter(variable != "length")
 
 # make plot
 my_plot <- ggplot(my_df_melt, aes(x=variable, y=value, fill=book))+
@@ -93,7 +99,7 @@ my_plot <- ggplot(my_df_melt, aes(x=variable, y=value, fill=book))+
 my_plot
 
 # save plot
-ggsave(my_plot, filename = "figures/Goodreads_SA.png", height = 9, width = 16, scale = 0.5)
+ggsave(my_plot, filename = "figures/Goodreads_SA.png", height = 9, width = 16, scale = 0.7)
 
 
 ### Your Turn

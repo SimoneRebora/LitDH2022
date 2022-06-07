@@ -46,9 +46,9 @@ write.csv(my_df, file = paste("corpora/Goodreads_", my_text, ".csv", sep = ""))
 # Important: try to keep the same link structure, because
 # some rubbish might be added at the end if you search for a different book
 # e.g. 
-# https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows?ac=1&from_search=true&qid=9sjp4ldVfm&rank=1
+# https://www.goodreads.com/book/show/10664113-a-dance-with-dragons?ac=1&from_search=true&qid=9sjp4ldVfm&rank=1
 # better write:
-# https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
+# https://www.goodreads.com/book/show/10664113-a-dance-with-dragons
 #
 # then if you feel confident, you can try an retrieve more information for each review
 # for example the "shelves"
