@@ -1,1 +1,3 @@
-Here the figures are.
+# Corpora
+
+This folder contains figures produced by the analysis.
